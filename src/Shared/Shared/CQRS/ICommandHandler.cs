@@ -7,7 +7,7 @@ public interface ICommandHandler<in TRequest> : IRequestHandler<TRequest, Unit>
 {
 }
 
-public interface ICommandHandler<in TRequest, out TResponse> : IRequestHandler<TRequest, TResponse>
+public interface ICommandHandler<in TRequest, TResponse> : IRequestHandler<TRequest, TResponse>
     where TRequest : ICommand<TResponse>
     where TResponse : notnull
 {
